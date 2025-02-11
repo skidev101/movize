@@ -1,0 +1,40 @@
+.movie-wrap{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1em 5px;
+}
+.movie-wrap .movie-card{
+  background: oldlace;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 280px;
+  padding: 8px 6px;
+  border-radius: 14px;
+}
+.movie-card .movie-img{
+  width: 100%;
+  height: 180px;
+  padding: 10px 0;
+}
+.movie-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+.movie-info{
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+.movie-info .movie-title{
+  font-size: 1.2em;
+}
+.movie-info .other-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -39,7 +39,10 @@
   font-size: 1.1em;
   border-radius: 14px;
 }
-
+.error-text{
+  text-align: center;
+  margin-top: 10px;
+}
 
 
 

@@ -3,6 +3,12 @@ import './Searchbar.css'
 
 const Searchbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [movies, setMovies] = useState([]);
+  
+  const displayErr = (message) => {
+    const errorText = document.querySelector('.error-text');
+    errorText.textContent = message;
+  }
   
   const handleSearch = async(e) => {
     e.preventDefault();
@@ -12,15 +18,15 @@ const Searchbar = () => {
         headers: { 
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          searchQuery: searchQuery
-        })
+        body: JSON.stringify({searchQuery})
       });
       const data = await response.json();
+      setMovies(data);
       console.log(data);
       console.log(searchQuery);
       } catch (err) {
         console.error(err);
+        displayErr(err);
       }
     };
   
@@ -43,6 +49,13 @@ const Searchbar = () => {
         value={searchQuery}
         onChange={(e) => {setSearchQuery(e.target.value)}}/>
       </div>
+    </div>
+    <p className="error-text"></p>
+    
+    <div className="mv-cards">
+      {movies.map((movie) => {
+        <MovieCard key={movie.id} {...movie}/>
+      })}
     </div>
     </form>
   )
