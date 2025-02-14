@@ -5,7 +5,7 @@
   padding: 1em 5px;
 }
 .movie-wrap .movie-card{
-  background: oldlace;
+  background: #f1f1f1;
   display: flex;
   flex-direction: column;
   width: 300px;

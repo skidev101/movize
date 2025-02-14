@@ -43,8 +43,11 @@
   text-align: center;
   margin-top: 10px;
 }
-
-
+.mv-cards{
+  width: 100%;
+  height: max-content;
+  background: teal;
+}
 
 
 

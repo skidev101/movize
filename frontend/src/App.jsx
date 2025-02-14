@@ -1,14 +1,16 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import Intro from './Components/Intro/Intro'
 import Searchbar from './Components/Searchbar/Searchbar'
-import MovieCard from './Components/MovieCard/MovieCard'
+
 
 const App = () => {
   return (
     <div>
       <Intro />
-      <Searchbar />
-      <MovieCard />
+     <BrowserRouter>
+        <Searchbar />
+     </BrowserRouter>
     </div>
   )
 }

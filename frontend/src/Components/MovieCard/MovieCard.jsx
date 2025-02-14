@@ -1,14 +1,14 @@
 import React from 'react'
 import './MovieCard.css'
 
-const MovieCard = (movie) => {
+const MovieCard = ({ movie }) => {
   return(
     <div className="movie-wrap">
       <div className="movie-card">
       <div className="movie-img">
         <img 
         className="movie-image"
-        src={movie.src}
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt="img"
         />
       </div>
@@ -23,7 +23,7 @@ const MovieCard = (movie) => {
           </p>
           <p className="movie-votes">
             <i className="fa fa-like"></i>
-            {movie.vote}
+            {movie.vote_average}
           </p>
         </div>
       </div>

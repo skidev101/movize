@@ -12,8 +12,7 @@ const handleSearch = async(req, res) => {
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${token}`
-     },
-     mode: 'no-cors'
+     }
     };
     
     const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=true&language=en-US&page=1`, options);
@@ -24,7 +23,7 @@ const handleSearch = async(req, res) => {
       
   } catch (err){
     console.error(err);
-    res.status(500).send('Internal Server Error or No Internet Connection')
+    res.status(500).send("Internal Server Error or No Internet Connection")
   }
 }
 
