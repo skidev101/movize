@@ -17,16 +17,21 @@
 .search-icon{
   padding: 0 5px;
 }
-.search-icon span{
+.search-icon button{
   display: grid;
   place-items: center;
+  border: none;
+  outline: none;
   width: 40px;
   height: 40px;
   background: #11c497;
   border-radius: 12px;
 }
-.search-icon span i{
-  font-size: 1.1em;
+.search-icon button:active{
+  background: #0cd6a3;
+}
+.search-icon button i{
+  font-size: 1.2em;
   color: #fff;
 }
 .search-wrap input{
@@ -46,9 +51,41 @@
 .mv-cards{
   width: 100%;
   height: max-content;
-  background: teal;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  position: relative;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px inset #11c497;
+  animation: l5 3s infinite;
+}
+.loader:after {
+  animation-delay: -1.5s;
+  border-radius: 0;
+}
+@keyframes l5{
+  0%    {inset:0    30px 30px 0   }
+  12.5% {inset:0    30px 0    0   }
+  25%   {inset:30px 30px 0    0   }
+  37.5% {inset:30px 0    0    0   }
+  50%   {inset:30px 0    0    30px}
+  62.5% {inset:0    0    0    30px}
+  75%   {inset:0    0    30px 30px}
+  87.5% {inset:0    0    30px 0   }
+  100%  {inset:0    30px 30px 0   }
+}
 
 
 

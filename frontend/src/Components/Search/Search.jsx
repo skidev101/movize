@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
-import './Searchbar.css'
+import './Search.css'
 import MovieCard from '../MovieCard/MovieCard'
 
-const Searchbar = () => {
+const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
+  const [loading, isLoading] = useState(false);
   
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter'){
+      handleSearch(e);
+      e.target.blur();
+    }
+  }
   const displayErr = (message) => {
     const errorText = document.querySelector('.error-text');
     errorText.textContent = message;
@@ -13,6 +20,7 @@ const Searchbar = () => {
   
   const handleSearch = async(e) => {
     e.preventDefault();
+    isLoading(true);
     try{
       const response = await fetch('http://localhost:4000/search', {
         method: 'POST',
@@ -22,13 +30,14 @@ const Searchbar = () => {
         body: JSON.stringify({searchQuery})
       });
       const data = await response.json();
-      setMovies(data.results);
+      data.results = '' ? displayErr('Movie not found') : setMovies(data.results);
       console.log(movies);
-      console.log(data.results);
-      console.log(searchQuery);
+      
       } catch (err) {
         console.error(err);
-        displayErr(err);
+        displayErr('An Error occured');
+      } finally {
+        isLoading(false);
       }
     };
   
@@ -38,32 +47,38 @@ const Searchbar = () => {
       <div className="searchbar-wrap">
       <div className="search-wrap" tabindex="0">
         <div className="search-icon">
-          <span>
+          <button>
             <i 
             className="fa fa-magnifying-glass"
             onClick={handleSearch}></i>
-          </span>
+          </button>
         </div>
         <input 
         type="text"
         placeholder="Search a movie"
         required
         value={searchQuery}
-        onChange={(e) => {setSearchQuery(e.target.value)}}/>
+        onChange={(e) => {setSearchQuery(e.target.value)}}
+        onKeyPress={handleKeyPress}
+        />
       </div>
     </div>
     <p className="error-text"></p>
     
+    {loading ? (
+    <div className="loader"></div>
+    ): (
     <div className="mv-cards">
-     {movies.length > 0 ? 
+     {
         movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie}/>
-      )) :
-      <p>Movie not found</p>
+      ))
      }
     </div>
+    )}
+    
     </div>
   )
 }
 
-export default Searchbar
+export default Search

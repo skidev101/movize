@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Intro from './Components/Intro/Intro'
-import Searchbar from './Components/Searchbar/Searchbar'
+import Search from './Components/Search/Search'
 
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Intro />
      <BrowserRouter>
-        <Searchbar />
+        <Search />
      </BrowserRouter>
     </div>
   )
