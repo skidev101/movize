@@ -10,3 +10,5 @@ const MovieDetails = ({ movie }) => {
     </div>
   )
 }
+
+export default MovieDetails

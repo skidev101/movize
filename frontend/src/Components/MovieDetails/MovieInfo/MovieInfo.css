@@ -1,0 +1,19 @@
+.mi-wrap{
+  width: 100%;
+  height: max-content;
+}
+.title-rate{
+  display: flex;
+  flex-direction: column;
+  background: oldlace;
+  margin-top: 2em;
+}
+.title h1{
+  font-size: 1.2em;
+  color: #fff;
+}
+.rate{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Intro from './Components/Intro/Intro'
 import Search from './Components/Search/Search'
 
@@ -9,7 +9,10 @@ const App = () => {
     <div>
       <Intro />
      <BrowserRouter>
-        <Search />
+        <Switch>
+          <Route path="/" exact component={Search} />
+          <Route path="/movies/:id" component={MovieInfo} />
+        </Switch>
      </BrowserRouter>
     </div>
   )
