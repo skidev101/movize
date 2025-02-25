@@ -23,7 +23,7 @@ const handleSearch = async(req, res) => {
       
   } catch (err){
     console.error(err);
-    res.status(500).send("Internal Server Error or No Internet Connection")
+    res.status(500).send("Internal Server Error or No Internet Connection");
   }
 }
 

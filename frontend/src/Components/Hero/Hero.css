@@ -1,0 +1,19 @@
+.hero-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 0 8px;
+}
+.text-box{
+  text-align: center;
+}
+.text-box h1{
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.text-box p{
+  font-size: 1.3em;
+}

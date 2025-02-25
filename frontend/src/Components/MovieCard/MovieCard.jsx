@@ -2,6 +2,7 @@ import React from 'react'
 import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
+
   return(
     <div className="movie-wrap">
       <div className="movie-card">
@@ -9,7 +10,7 @@ const MovieCard = ({ movie }) => {
         <img 
         className="movie-image"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-        alt="img"
+        alt={movie.title}
         />
       </div>
       <div className="movie-info">
@@ -22,12 +23,12 @@ const MovieCard = ({ movie }) => {
             {movie.release_date}
           </p>
           <p className="movie-votes">
-            <i className="fa fa-like"></i>
+            <i className="fa fa-thumbs-up"></i>
             {movie.vote_average}
           </p>
         </div>
       </div>
-    </div>
+     </div>
     </div>
   )
 }

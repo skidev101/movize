@@ -1,20 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Intro from './Components/Intro/Intro'
-import Search from './Components/Search/Search'
+import Header from './Components/Header/Header'
+import Hero from './Components/Hero/Hero'
+import PopularMovies from './Components/PopularMovies/PopularMovies'
 
 
 const App = () => {
-  return (
-    <div>
-      <Intro />
-     <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Search} />
-          <Route path="/movies/:id" component={MovieInfo} />
-        </Switch>
-     </BrowserRouter>
-    </div>
+  return(
+    <>
+       <Header />
+       <Hero />
+       <PopularMovies />
+    </>
   )
 }
 
