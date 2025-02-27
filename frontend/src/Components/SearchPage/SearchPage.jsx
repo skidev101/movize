@@ -9,6 +9,11 @@ const SearchPage = () => {
   const [searchQuery, setSearchQuery] = useState(q);
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  
+  useEffect(() => {
+    handleSearch();
+  }, [searchQuery]);
   
   const handleKeyPress = (e) => {
     if (e.key === 'Enter'){
@@ -18,12 +23,11 @@ const SearchPage = () => {
   }
   
   const displayErr = (message) => {
-    const errorText = document.querySelector('.error-text');
-    errorText.textContent = message;
+    setError(message);
   }
   
-  const handleSearch = async (e) => {
-      e.preventDefault();
+  const handleSearch = async () => {
+      setError(null);
       setLoading(true);
       try{
         const response = await fetch('http://localhost:4000/search', {
@@ -34,7 +38,7 @@ const SearchPage = () => {
           body: JSON.stringify({searchQuery})
         });
         const data = await response.json();
-        if (data.results === '') {
+        if (!data.results || data.results.length === 0) {
           displayErr('Movie not found')
         } else {
           setMovies(data.results);
@@ -42,7 +46,7 @@ const SearchPage = () => {
         }
         } catch (err) {
           console.error(err);
-          displayErr('An Error occured');
+          displayErr('An Unknown error occured');
         } finally {
           setLoading(false);
         };
@@ -78,11 +82,11 @@ const SearchPage = () => {
         
       </div>
     </div>
-    <p className="error-text"></p>
     
     {loading ? (
     <div className="loader"></div>
-    ): (
+    ): error ? (
+    <p className="error-text">{error}</p>) : (
     <div className="mv-cards">
      {
         movies.map((movie) => (

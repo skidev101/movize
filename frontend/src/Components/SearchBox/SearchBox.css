@@ -1,7 +1,5 @@
 .searchbar-wrap{
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
+  padding: 1em 0;
 }
 .search-wrap{
   display: flex;
@@ -24,7 +22,6 @@
   outline: none;
   width: 40px;
   height: 40px;
-  background: #11c497;
   border-radius: 12px;
 }
 .search-icon span:active{
@@ -35,7 +32,7 @@
   color: #fff;
 }
 .search-wrap input{
-  width: 95%;
+  width: 90%;
   height: 100%;
   border: none;
   outline: none;
@@ -47,7 +44,7 @@
 .search-wrap .search-btn{
   width: 40px;
   height: 40px;
-  background: lightblue;
+  background: #4E7EFE;
   border-radius: 50%;
 }
 .search-btn button{
@@ -62,9 +59,6 @@
 .search-btn button i{
   color: #fff;
   font-size: 1.2em;
-}
-.search-btn button:active{
-  background: #f1f1f1;
 }
 
 

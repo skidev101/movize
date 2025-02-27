@@ -1,16 +1,20 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
-import PopularMovies from './Components/PopularMovies/PopularMovies'
+import SearchPage from './Components/SearchPage/SearchPage'
+
 
 
 const App = () => {
-  return(
-    <>
-       <Header />
-       <Hero />
-       <PopularMovies />
-    </>
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Hero/>}/>
+        <Route path="/search" element={<SearchPage/>}/>
+      </Routes>
+    </Router>
   )
 }
 

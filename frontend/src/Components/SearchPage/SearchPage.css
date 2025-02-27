@@ -1,19 +1,16 @@
 .searchbar-wrap{
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 5px;
 }
 .search-wrap{
   display: flex;
   align-items: center;
   width: 90%;
   height: 3em;
-  border: 1px solid #000;
-  border-radius: 12px;
+  border-bottom: 1px solid #000;
 }
 .search-wrap:focus{
-  border-color: #11c497;
+  border-bottom-color: #4E7EFE;
 }
 .search-icon{
   padding: 0 5px;
@@ -21,34 +18,26 @@
 .search-icon span{
   display: grid;
   place-items: center;
-  border: none;
-  outline: none;
   width: 40px;
   height: 40px;
-  background: #11c497;
-  border-radius: 12px;
-}
-.search-icon span:active{
-  background: #0cd6a3;
 }
 .search-icon span i{
   font-size: 1.2em;
-  color: #fff;
+  color: #f1f1f1;
 }
 .search-wrap input{
-  width: 93%;
+  width: 90%;
   height: 100%;
   border: none;
   outline: none;
   background: none;
   padding: 0 3px 0 4px;
   font-size: 1.1em;
-  border-radius: 14px;
 }
 .search-wrap .search-btn{
   width: 40px;
   height: 40px;
-  background: lightblue;
+  background: #4E7EFE;
   border-radius: 50%;
 }
 .search-btn button{
@@ -65,7 +54,7 @@
   font-size: 1.2em;
 }
 .search-btn button:active{
-  background: #f1f1f1;
+  background: lightblue;
 }
 .error-text{
   text-align: center;
@@ -73,6 +62,7 @@
 }
 .mv-cards{
   width: 100%;
+  max-width: 900px;
   height: max-content;
   display: flex;
   justify-content: center;
@@ -91,7 +81,7 @@
   content: "";
   position: absolute;
   border-radius: 50px;
-  box-shadow: 0 0 0 2px inset #11c497;
+  box-shadow: 0 0 0 2px inset #4E7EFE;
   animation: l5 3s infinite;
 }
 .loader:after {

@@ -26,7 +26,7 @@ const PopularMovies = () => {
         }
       });
       const data = await response.json();
-      if (!data.results) {
+      if (!data.results || data.results.length === 0) {
         displayErr('No Popular movies for now');
       } else {
         setMovies(data.results)
