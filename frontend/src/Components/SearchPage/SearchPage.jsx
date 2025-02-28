@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import './SearchPage.css'
 import MovieCard from '../MovieCard/MovieCard'
@@ -12,11 +12,19 @@ const SearchPage = () => {
   const [error, setError] = useState(null);
   
   useEffect(() => {
-    handleSearch();
+    if (q) {
+      handleSearch(q)
+    }
+  }, [q])
+  
+  useEffect(() => {
+    if (searchQuery) {
+      handleSearch();
+    }
   }, [searchQuery]);
   
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter'){
+    if (e.key === 'Enter' && searchQuery.trim() !== ''){
       e.target.blur();
       handleSearch(e);
     }
@@ -26,7 +34,8 @@ const SearchPage = () => {
     setError(message);
   }
   
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+      e.preventDefault();
       setError(null);
       setLoading(true);
       try{
@@ -57,7 +66,7 @@ const SearchPage = () => {
     <>
       <form onSubmit={handleSearch}>
       <div className="searchbar-wrap">
-      <div className="search-wrap" tabindex="0">
+      <div className="search-wrap" tabIndex="0">
         <div className="search-icon">
           <span>
             <i 
