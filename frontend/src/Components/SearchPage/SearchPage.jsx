@@ -30,9 +30,6 @@ const SearchPage = () => {
     }
   }
   
-  const displayErr = (message) => {
-    setError(message);
-  }
   
   const handleSearch = async (e) => {
       e.preventDefault();
@@ -48,14 +45,14 @@ const SearchPage = () => {
         });
         const data = await response.json();
         if (!data.results || data.results.length === 0) {
-          displayErr('Movie not found')
+          setError('Movie not found')
         } else {
           setMovies(data.results);
           console.log(movies);
         }
         } catch (err) {
           console.error(err);
-          displayErr('An Unknown error occured');
+          setError('An Unknown error occured');
         } finally {
           setLoading(false);
         };
