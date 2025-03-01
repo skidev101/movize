@@ -60,6 +60,10 @@
   text-align: center;
   margin-top: 10px;
 }
+.mv-res-title{
+  width: 100%;
+  text-align: center;
+}
 .mv-cards{
   width: 100%;
   max-width: 900px;

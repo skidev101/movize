@@ -1,21 +1,35 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import './SearchPage.css'
 import MovieCard from '../MovieCard/MovieCard'
 
 
 const SearchPage = () => {
-  const { q } = useParams();
-  const [searchQuery, setSearchQuery] = useState(q);
+  const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [resultText, setResultText] = useState(null);
+  const [placeholderText, setPlaceholderText] = useState("Search a movie...");
+  
+  const placeholderArray = [
+      "Search Ironman",
+      "Search Captain America",
+      "Search Superman",
+      "Search It",
+      "Search Black Adam"
+    ];
   
   useEffect(() => {
-    if (q) {
-      handleSearch(q)
-    }
-  }, [q])
+    let currentIndex = 0;
+    const changePlaceholder = () => {
+      setPlaceholderText(placeholderArray[currentIndex]);
+      currentIndex = (currentIndex + 1) % placeholderArray.length;
+    };
+    
+    const timer = setInterval(changePlaceholder, 3000);
+    
+    return () => clearInterval(timer)
+  }, [])
   
   useEffect(() => {
     if (searchQuery) {
@@ -34,6 +48,7 @@ const SearchPage = () => {
   const handleSearch = async (e) => {
       e.preventDefault();
       setError(null);
+      setResultText(null);
       setLoading(true);
       try{
         const response = await fetch('http://localhost:4000/search', {
@@ -45,14 +60,17 @@ const SearchPage = () => {
         });
         const data = await response.json();
         if (!data.results || data.results.length === 0) {
-          setError('Movie not found')
+          setError('Movie not found');
+          setResultText(null);
         } else {
           setMovies(data.results);
+          setResultText(`Results for ${searchQuery}`);
           console.log(movies);
         }
         } catch (err) {
           console.error(err);
           setError('An Unknown error occured');
+          setResultText(null);
         } finally {
           setLoading(false);
         };
@@ -72,7 +90,7 @@ const SearchPage = () => {
         </div>
         <input 
         type="text"
-        placeholder="Search a movie"
+        placeholder={placeholderText}
         required
         value={searchQuery}
         onChange={(e) => {setSearchQuery(e.target.value)}}
@@ -85,8 +103,12 @@ const SearchPage = () => {
             </span>
           </button>
         </div>
-        
       </div>
+    </div>
+    </form>
+    
+    <div className="mv-res-title">
+        <h4>{resultText}</h4>
     </div>
     
     {loading ? (
@@ -94,17 +116,11 @@ const SearchPage = () => {
     ): error ? (
     <p className="error-text">{error}</p>) : (
     <div className="mv-cards">
-     {
-        movies.map((movie) => (
+     {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie}/>
-      ))
-     }
-     <div>
-       <h1>Hello world</h1>
-     </div>
+      ))}
     </div>
     )}
-    </form>
     </>
   )
 }
