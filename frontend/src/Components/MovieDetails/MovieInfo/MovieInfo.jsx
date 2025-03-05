@@ -2,6 +2,7 @@ import React from 'react'
 import './MovieInfo.css'
 
 const MovieInfo = ({ movie }) => {
+  
   return(
     <div className="mi-wrap" id="mi-wrap">
       <div className="title-rate">
@@ -29,3 +30,4 @@ const MovieInfo = ({ movie }) => {
   )
 }
 
+export default MovieInfo

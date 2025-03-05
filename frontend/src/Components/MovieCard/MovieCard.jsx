@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
-
+  
   return(
     <div className="movie-wrap">
+      <Link to={`/movie/${movie.id}`}
+      state={{ movie }}>
       <div className="movie-card">
       <div className="movie-img">
         <img 
@@ -29,6 +32,7 @@ const MovieCard = ({ movie }) => {
         </div>
       </div>
      </div>
+    </Link>
     </div>
   )
 }

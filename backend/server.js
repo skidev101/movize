@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use('/popular', require('./routes/popular'));
 app.use('/search', require('./routes/search'));
-
+app.use('/movie', require('./routes/movie'));
 
 
 

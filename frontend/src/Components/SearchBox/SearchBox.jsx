@@ -1,20 +1,20 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './SearchBox.css'
 
 
 const SearchBox = () => {
-  const navigate = useNavigate();
   
-  const redirect = () => {
-    navigate(`/search`);
-  }
+  // const redirect = () => {
+  //   navigate(`/search`);
+  // }
   
   
   return (
     <>
       <div className="searchbar-wrap">
-      <div className="search-wrap" tabIndex="0">
+      <Link to={"/search"}>
+      <div className="search-wrap">
         <div className="search-icon">
           <span>
             <i 
@@ -24,10 +24,10 @@ const SearchBox = () => {
         <input
         placeholder="Search a movie"
         readOnly
-        onClick={redirect}
         />
         
       </div>
+      </Link>
     </div>
     
     </>

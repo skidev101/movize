@@ -42,6 +42,9 @@ const PopularMovies = () => {
 
   return(
     <>
+      <div className="title">
+        <h2>Trending 🔥</h2>
+      </div>
       {loading ? (
         <div className="loader"></div>
       ) : error ? (

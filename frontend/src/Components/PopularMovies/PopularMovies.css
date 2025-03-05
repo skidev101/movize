@@ -1,3 +1,9 @@
+.title{
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 1em 0;
+}
 .mv-cards{
   width: 100%;
   height: max-content;
