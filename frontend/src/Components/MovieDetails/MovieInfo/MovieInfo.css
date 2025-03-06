@@ -1,6 +1,15 @@
 .mi-wrap{
   width: 100%;
+  max-width: 700px;
   height: max-content;
+  backdrop-filter: blur(10px);
+}
+@media (min-width: 760px) {
+  .mi-wrap{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
 .title-rate{
   display: flex;
@@ -9,8 +18,8 @@
   margin-top: 2em;
 }
 .title h1{
-  font-size: 1.2em;
-  color: #fff;
+  font-size: 1.4em;
+  color: #000;
 }
 .rate{
   display: flex;

@@ -4,7 +4,7 @@ import MovieCard from '../MovieCard/MovieCard'
 
 
 const SearchPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(null);
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);

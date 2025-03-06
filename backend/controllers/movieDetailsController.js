@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 const getMovieDetails = async (req, res) => {
-  const { movieId } = req.body;
-  if (!movieId) return res.status(400).send('Empty body');
+  const { movieId } = req.params;
+  if (!movieId) return res.status(400).send('Movie ID is required');
   
   try{
     const token = process.env.TMDB_ACCESS_TOKEN;

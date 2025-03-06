@@ -11,13 +11,13 @@
   align-items: center;
   width: 90%;
   height: 3em;
-  background: #CFDEF5;
+  background: #EEE;
   border-radius: 50px;
   box-shadow: 0 0 1px #2f2f2f;
 }
 @media (min-width: 700px) {
   .search-wrap{
-    width: 25em;
+    width: 30em;
     height: 4em;
   }
 }

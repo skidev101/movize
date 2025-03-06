@@ -3,12 +3,9 @@ import './WordSearch.css'
 
 const WordSearch = ({ movie }) => {
   
-  
-  
-  
   return(
     <>
-      <h1>hello world</h1>
+      <h1>{movie.title}</h1>
     </>
   )
 }

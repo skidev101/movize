@@ -1,13 +1,18 @@
-.hero-wrap{
+.hp-wrap{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 80vh;
   padding: 0 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 .text-box{
   text-align: center;
+  color: #fff;
 }
 .text-box h1{
   font-size: 1.8em;

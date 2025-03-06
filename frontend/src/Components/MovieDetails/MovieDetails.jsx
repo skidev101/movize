@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import './MovieDetails.css'
 import MovieInfo from './MovieInfo/MovieInfo'
 import WordSearch from './WordSearch/WordSearch'
 
 const MovieDetails = () => {
-  const location = useLocation();
-  const { movie } = location.state;
-  const movieId = movie.id;
+  const { movieId } = useParams();
   
   const [completeMovie, setCompleteMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -23,12 +21,8 @@ const MovieDetails = () => {
       setError(null);
       setLoading(true);
       try{
-        const response = await fetch('http://localhost:4000/movie', {
-          method: 'POST',
-          headers: { 
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({movieId})
+        const response = await fetch(`http://localhost:4000/movie/${movieId}`, {
+          method: 'GET'
         });
         const data = await response.json();
         if (!data) {

@@ -24,7 +24,7 @@
   content: "";
   position: absolute;
   border-radius: 50px;
-  box-shadow: 0 0 0 2px inset #11c497;
+  box-shadow: 0 0 0 2px inset #4E7EFE;
   animation: l5 3s infinite;
 }
 .loader:after {

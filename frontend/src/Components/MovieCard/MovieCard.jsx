@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
+  const movieId = movie.id;
   
   return(
     <div className="movie-wrap">
-      <Link to={`/movie/${movie.id}`}
+      <Link to={`/movie/${movieId}`}
       state={{ movie }}>
       <div className="movie-card">
       <div className="movie-img">
