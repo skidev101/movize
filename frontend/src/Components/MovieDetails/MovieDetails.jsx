@@ -38,6 +38,7 @@ const MovieDetails = () => {
           
         } finally {
           setLoading(false);
+          console.log(completeMovie);
         };
     };
   

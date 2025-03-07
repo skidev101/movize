@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './MovieInfo.css'
 
 const MovieInfo = ({ movie }) => {
+  useEffect(() => {
+    console.log(movie)
+  }, []);
   
   return(
     <div className="mi-wrap" id="mi-wrap">
