@@ -3,7 +3,8 @@ import './MovieInfo.css'
 
 const MovieInfo = ({ movie }) => {
   useEffect(() => {
-    console.log(movie)
+    console.log(movie);
+    console.log("mounted");
   }, []);
   
   return(
