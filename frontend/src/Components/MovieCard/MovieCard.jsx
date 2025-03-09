@@ -7,8 +7,7 @@ const MovieCard = ({ movie }) => {
   
   return(
     <div className="movie-wrap">
-      <Link to={`/movie/${movieId}`}
-      state={{ movie }}>
+      <Link to={`/movie/${movieId}`}>
       <div className="movie-card">
       <div className="movie-img">
         <img 
