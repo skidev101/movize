@@ -41,7 +41,7 @@ const PopularMovies = () => {
     };
 
   return(
-    <>
+    <div className="pop-wrap">
       <div className="title">
         <h2>Trending 🔥</h2>
       </div>
@@ -50,16 +50,15 @@ const PopularMovies = () => {
       ) : error ? (
         <p className="error-text">{error}</p>
       ) : (
+        <div className="mv-cards-wrap">
         <div className="mv-cards">
           {movies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
           ))}
-          <div>
-            <h1>Hello world</h1>
-          </div>
+        </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

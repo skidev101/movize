@@ -5,11 +5,6 @@ import './SearchBox.css'
 
 const SearchBox = () => {
   
-  // const redirect = () => {
-  //   navigate(`/search`);
-  // }
-  
-  
   return (
     <>
       <div className="searchbar-wrap">

@@ -1,11 +1,19 @@
-.title{
+.pop-wrap .title{
   display: flex;
   justify-content: center;
   flex: 1;
   padding: 1em 0;
 }
+.mv-cards-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .mv-cards{
   width: 100%;
+  max-width: 1000px;
   height: max-content;
   display: flex;
   justify-content: center;

@@ -28,9 +28,9 @@ const HomePage = () => {
   const bgStyle = bgImg ? {backgroundImage: `url(${bgImg})`} : {};
   
   return (
-    <>
     <div className="hp-wrap" style={bgStyle}>
-      <div className="text-box">
+      <div className="hp">
+        <div className="text-box">
         <h1>Movie Word search <br /> simplified</h1>
         <p>
          Search for movies and word 
@@ -41,8 +41,8 @@ const HomePage = () => {
         </p>
       </div>
       <SearchBox />
+      </div>
     </div>
-    </>
   )
 }
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const popularSearchController = require('../controllers/popularSearchController')
+const { handlePopSearch } = require('../controllers/popularSearchController')
 
-router.get('/', popularSearchController.handlePopSearch);
+router.get('/', handlePopSearch);
 
 module.exports = router;

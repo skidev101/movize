@@ -1,5 +1,10 @@
 .md-wrap{
-  padding: 2px 5px;
+  width: 100%;
+  padding: 2px 10px;
+  background: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .error-text{
   text-align: center;

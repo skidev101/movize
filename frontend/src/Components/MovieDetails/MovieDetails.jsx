@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import './MovieDetails.css'
 import MovieInfo from './MovieInfo/MovieInfo'
-import WordSearch from './WordSearch/WordSearch'
+// import WordSearch from './WordSearch/WordSearch'
+import shield from '../../Assets/shield.jpg'
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -21,8 +22,12 @@ const MovieDetails = () => {
       setError(null);
       setLoading(true);
       try{
-        const response = await fetch(`http://localhost:4000/movie/${movieId}`, {
-          method: 'GET'
+        const response = await fetch(`http://localhost:4000/movie`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ movieId })
         });
         const data = await response.json();
         if (!data) {
@@ -42,17 +47,18 @@ const MovieDetails = () => {
         };
     };
   
+    const bgUrl = completeMovie?.poster_path ? `https://image.tmdb.org/t/p/w500${completeMovie.poster_path}` : shield;
+    const bgStyle = {backgroundImage: `url(${bgUrl})`};
   
   return(
     <div className="md-wrap">
       {loading ? (<div className="loader"></div>)
         : error ? (<p className="error-text">{error}</p>)
-        : (
+        : completeMovie ? (
         <div>
-        <MovieInfo movie={ completeMovie } />
-        <WordSearch movie={ completeMovie } />
+          <MovieInfo movie={ completeMovie }/>
         </div>
-      )}
+      ) : null}
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-
+import './SearchPage.css'
 import MovieCard from '../MovieCard/MovieCard'
 
 
 const SearchPage = () => {
-  const [searchQuery, setSearchQuery] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -81,8 +81,8 @@ const SearchPage = () => {
     <>
       <form onSubmit={handleSearch}>
       <div className="searchbar-wrap">
-      <div className="search-wrap" tabIndex="0">
-        <div className="search-icon">
+      <div className="searchbar" tabIndex="0">
+        <div className="searchbar-icon">
           <span>
             <i 
             className="fa fa-magnifying-glass"></i>
@@ -96,7 +96,7 @@ const SearchPage = () => {
         onChange={(e) => {setSearchQuery(e.target.value)}}
         onKeyPress={handleKeyPress}
         />
-        <div className="search-btn">
+        <div className="searchbar-btn">
           <button type="submit">
             <span>
               <i className="fa fa-arrow-right"></i>

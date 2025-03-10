@@ -22,7 +22,7 @@
   }
 }
 .search-icon{
-  padding: 0 3px;
+  padding: 0 1px;
 }
 .search-icon span{
   display: grid;
@@ -43,7 +43,7 @@
   border: none;
   outline: none;
   background: none;
-  padding: 0 3px 0 2px;
+  padding: 0 1px 0 0;
   font-size: 1.1em;
   text-decoration: none;
 }
