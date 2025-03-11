@@ -19,6 +19,7 @@ const HomePage = () => {
       setBgImg(bgSrc[currentIndex]);
       currentIndex = (currentIndex + 1) % bgSrc.length;
     };
+    console.log("Hello world");
     
     const timer = setInterval(changeBgImg, 10000)
     
