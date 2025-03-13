@@ -42,6 +42,7 @@ const SearchPage = () => {
     if (e.key === 'Enter' && searchQuery.trim() !== ''){
       e.target.blur();
       handleSearch(e);
+      console.log("search in progress");
     }
   }
   
