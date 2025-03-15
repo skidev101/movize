@@ -17,7 +17,7 @@ const SearchPage = () => {
       "Search Superman",
       "Search It",
       "Search Black Adam"
-    ];
+  ];
   
   useEffect(() => {
     let currentIndex = 0;

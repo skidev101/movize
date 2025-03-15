@@ -12,7 +12,8 @@ const handleSearch = async(req, res) => {
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${token}`
-     }
+     },
+     redirect: 'follow'
     };
     
     const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=true&language=en-US&page=1`, options);

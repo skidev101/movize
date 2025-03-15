@@ -11,8 +11,14 @@ const MovieInfo = ({ movie }) => {
           <h1>{movie.title}</h1>
         </div>
         <div className="rate">
-          <p>{movie.release_date}</p>
-          <p>{movie.vote_average}/10</p>
+          <span>
+            <i className="fa fa-calender"> </i>
+            <p>{movie.release_date}</p>
+          </span>
+          <span>
+            <i className="fa fa-thumbs-up"></i>
+            <p>{movie.vote_average}/10</p>
+          </span>
         </div>
       </div>
       
@@ -43,9 +49,9 @@ const MovieInfo = ({ movie }) => {
         {movie.production_companies.map((comp) => (
           <div key={comp.id} className="prod-wrap">
             <div className="prod-box">
-              <img src={`https://image.tmdb.org/t/p/w500${comp.poster_path}`}
+              {/*<img src={`https://image.tmdb.org/t/p/w500${comp.poster_path}`}
               alt="img"
-              />
+              />*/}
               <p>{comp.name}</p>
             </div>
           </div>

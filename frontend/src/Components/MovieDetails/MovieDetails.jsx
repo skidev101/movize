@@ -55,7 +55,7 @@ const MovieDetails = () => {
       {loading ? (<div className="loader"></div>)
         : error ? (<p className="error-text">{error}</p>)
         : completeMovie ? (
-        <div>
+        <div className="md-holder">
           <MovieInfo movie={ completeMovie }/>
         </div>
       ) : null}

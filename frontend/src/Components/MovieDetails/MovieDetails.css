@@ -1,10 +1,21 @@
 .md-wrap{
-  width: 100%;
-  padding: 2px 10px;
-  background: #fff;
+  width: auto;
+  height: 100%;
+  padding: 1em 3px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.md-wrap .md-holder{
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 3px 5px;
+  background: #cfdef5;
 }
 .error-text{
   text-align: center;
