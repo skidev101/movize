@@ -19,7 +19,7 @@ const PopularMovies = () => {
     setError(null)
     setLoading(true);
     try{
-      const response = await fetch('http://localhost:4000/popular', {
+      const response = await fetch('https://movize-backend.vercel.app/popular', {
         method: 'GET',
         headers: { 
           'Content-Type': 'application/json'

@@ -52,7 +52,7 @@ const SearchPage = () => {
       setResultText(null);
       setLoading(true);
       try{
-        const response = await fetch('http://localhost:4000/search', {
+        const response = await fetch('https://movize-backend.vercel.app/search', {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json'
