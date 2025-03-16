@@ -34,7 +34,6 @@ const SearchPage = () => {
   useEffect(() => {
     if (searchQuery) {
       handleSearch();
-      console.log("Hello world");
     }
   }, [searchQuery]);
   
