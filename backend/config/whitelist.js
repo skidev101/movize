@@ -1,5 +1,5 @@
 const whitelist = [
-  'https://movize.vercel.app/'
+  'https://movize.vercel.app'
 ];
 
 module.exports = whitelist;
