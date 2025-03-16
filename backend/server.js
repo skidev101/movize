@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-// const corsOptions = require('./config/corsOptions');
+const corsOptions = require('./config/corsOptions');
 const PORT = process.env.port || 4000;
 
 
-// app.use(cors(
-//   corsOptions,
-//   methods: ["POST", "GET"]
-// ));
+app.use(cors(
+  corsOptions,
+  methods: ["POST", "GET"]
+ ));
 
 app.use(express.json());
 
