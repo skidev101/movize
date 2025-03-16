@@ -26,4 +26,3 @@ const handleSubtitleSearch = async (req, res) => {
   }
 }
 
-module.exports = { handleSubtitleSearch }
