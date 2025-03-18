@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const corsOptions = require('../config/corsOptions');
+const credentials = require('../middleware/credentials');
 
+app.use(credentials);
 
 app.use(cors(corsOptions));
 
