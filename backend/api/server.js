@@ -2,8 +2,11 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const corsOptions = require('../config/corsOptions');
-const PORT = process.env.port || 4000;
 
+
+app.get('/', (req, res) => {
+  res.send("Hello world");
+});
 
 app.use(cors(corsOptions));
 
@@ -14,5 +17,3 @@ app.use('/search', require('../routes/search'));
 app.use('/movie', require('../routes/movie'));
 
 
-
-app.listen(PORT, () => {console.log(`App is running on port ${PORT}`)});
