@@ -3,6 +3,9 @@ const app = express();
 const cors = require('cors');
 const corsOptions = require('../config/corsOptions');
 
+app.get('/', (req, res) => {
+  res.send('Hello world');
+});
 
 app.use(cors(corsOptions));
 
