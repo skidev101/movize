@@ -22,7 +22,7 @@ const MovieDetails = () => {
       setError(null);
       setLoading(true);
       try{
-        const response = await fetch(`https://movize-backend.vercel.app/api/movie`, {
+        const response = await fetch(`https://movize-backend2.vercel.app/movie`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
