@@ -25,7 +25,7 @@ const SearchPage = () => {
       setPlaceholderText(placeholderArray[currentIndex]);
       currentIndex = (currentIndex + 1) % placeholderArray.length;
     };
-    
+    console.log("Hello world");
     const timer = setInterval(changePlaceholder, 3000);
     
     return () => clearInterval(timer)
