@@ -28,7 +28,7 @@ const MovieDetails = () => {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({ movieId }),
-          credentials: 'include'
+          mode: 'no-cors'
         });
         const data = await response.json();
         if (!data) {

@@ -24,7 +24,7 @@ const PopularMovies = () => {
         headers: { 
           'Content-Type': 'application/json'
         },
-        credentials: 'include'
+        mode: 'no-cors'
       });
       const data = await response.json();
       if (!data.results || data.results.length === 0) {
