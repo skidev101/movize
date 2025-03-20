@@ -57,8 +57,7 @@ const SearchPage = () => {
           headers: { 
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({searchQuery}),
-          mode: 'no-cors'
+          body: JSON.stringify({searchQuery})
         });
         const data = await response.json();
         if (!data.results || data.results.length === 0) {

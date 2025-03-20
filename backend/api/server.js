@@ -8,8 +8,6 @@ app.use(credentials);
 
 app.use(cors(corsOptions));
 
-app.options('*', cors(corsOptions));
-
 app.use(express.json());
 
 app.use('/popular', require('../routes/popular'));
