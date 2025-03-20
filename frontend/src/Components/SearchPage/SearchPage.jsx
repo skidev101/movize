@@ -47,6 +47,7 @@ const SearchPage = () => {
   
   
   const handleSearch = async (e) => {
+      e.preventDefault();
       setError(null);
       setResultText(null);
       setLoading(true);
