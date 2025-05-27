@@ -103,8 +103,9 @@
 .mv-website button{
   display: flex;
   align-items: center;
-  max-width: 50%;
+  max-width: 70%;
   height: 100%;
+  border: none;
   outline: none;
   background: #4E7EFE;
   border-radius: 50px;
@@ -117,6 +118,6 @@
 }
 .mv-website button i{
   font-size: 1.1em;
-  color: #000;
+  color: #fff;
   padding: 5px;
 }
