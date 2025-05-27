@@ -25,9 +25,24 @@
   align-items: center;
   gap: 12px;
 }
+.rate span{
+	display: flex;
+	gap: 3px;
+}
+.rate span i{
+	color: #000;
+	font-size: 1em;
+}
 .rate span p{
   padding: 0 5px;
 }
+/* .rate .release-date{
+	display: flex;
+}
+.rate .likes{
+	display: flex;
+	gap: 3px;
+} */
 .mv-img{
   width: 100%;
   height: 300px;
@@ -46,12 +61,11 @@
 }
 .mv-genres .mv-genres-wrap{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .mv-genres-wrap p{
-  column-gap: 8px;
+  padding-left: 12px;
 }
 .mv-desc{
   width: 100%;
@@ -94,11 +108,15 @@
   object-fit: cover;
   object-position: center;
 }
+.prod-wrap .prod-box p{
+	font-size: 1em;
+}
 .mv-website{
   width: 100%;
   height: 3em;
   display: flex;
   justify-content: center;
+  margin-top: 1.2em;
 }
 .mv-website button{
   display: flex;

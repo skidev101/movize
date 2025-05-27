@@ -11,11 +11,11 @@ const MovieInfo = ({ movie }) => {
           <h1>{movie.title}</h1>
         </div>
         <div className="rate">
-          <span>
+          <span className="release-date">
             <i className="fa fa-calender"> </i>
             <p>{movie.release_date}</p>
           </span>
-          <span>
+          <span className="likes">
             <i className="fa fa-thumbs-up"></i>
             <p>{movie.vote_average}/10</p>
           </span>
@@ -32,9 +32,9 @@ const MovieInfo = ({ movie }) => {
       <div className="mv-genres">
         <h4>Genres</h4>
         <div className="mv-genres-wrap">
-        {movie.genres.map((genre) => (
-          <p key={genre.id}>{genre.name}</p>
-        ))}
+	        {movie.genres.map((genre) => (
+	          <p key={genre.id}>{genre.name}</p>
+	        ))}
         </div>
       </div>
       
