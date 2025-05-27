@@ -1,19 +1,15 @@
-require('dotenv').config();
-
-
 const handleSearch = async(req, res) => {
   const { searchQuery } = req.body;
-  if(!searchQuery) return res.status(400).send('Empty body');
+  if(!searchQuery) return res.status(400).json({ message: 'Empty body' });
   
   try{
     const token = process.env.TMDB_ACCESS_TOKEN;
     const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${token}`
-     },
-     redirect: 'follow'
+	    method: 'GET',
+	    headers: {
+	      accept: 'application/json',
+	      Authorization: `Bearer ${token}`
+	    }
     };
     
     const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=true&language=en-US&page=1`, options);
