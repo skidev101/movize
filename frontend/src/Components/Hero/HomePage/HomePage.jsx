@@ -1,35 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import SearchBox from '../../SearchBox/SearchBox'
 import './HomePage.css'
-import captain from '../../../Assets/cap.jpg'
-import ironman from '../../../Assets/ironman.jpg'
 import shield from '../../../Assets/shield.jpg'
 
 const HomePage = () => {
-  const bgSrc = [
-    shield,
-    ironman,
-    captain
-  ];
-  const [bgImg, setBgImg] = useState(bgSrc[0]);
+  // const bgSrc = [
+  //   shield,
+  //   ironman,
+  //   captain
+  // ];
+  // const [bgImg, setBgImg] = useState(bgSrc[0]);
   
-  useEffect(() => {
-    let currentIndex = 0;
-    const changeBgImg = () => {
-      setBgImg(bgSrc[currentIndex]);
-      currentIndex = (currentIndex + 1) % bgSrc.length;
-    };
-    console.log("Hello world");
+  // useEffect(() => {
+  //   let currentIndex = 0;
+  //   const changeBgImg = () => {
+  //     setBgImg(bgSrc[currentIndex]);
+  //     currentIndex = (currentIndex + 1) % bgSrc.length;
+  //   };
+  //   console.log("Hello world");
     
-    const timer = setInterval(changeBgImg, 10000)
+  //   const timer = setInterval(changeBgImg, 10000)
     
-    return () => clearInterval(timer);
-  }, [])
+  //   return () => clearInterval(timer);
+  // }, [])
   
-  const bgStyle = bgImg ? {backgroundImage: `url(${bgImg})`} : {};
+  // const bgStyle = bgImg ? {backgroundImage: `url(${bgImg})`} : {};
   
   return (
-    <div className="hp-wrap" style={bgStyle}>
+    <div className="hp-wrap">
       <div className="hp">
         <div className="text-box">
         <h1>Movie Word search <br /> simplified</h1>
