@@ -1,6 +1,6 @@
 const handleSearch = async(req, res) => {
   const { searchQuery } = req.body;
-  if(!searchQuery) return res.status(400).json({ message: 'Empty body' });
+  if (!searchQuery) return res.status(400).json({ message: 'Empty body' });
   
   try{
     const token = process.env.TMDB_ACCESS_TOKEN;

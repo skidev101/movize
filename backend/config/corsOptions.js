@@ -1,5 +1,5 @@
 const whiteList = [
-	'https://movize.vercel.app/'
+	'https://movize.vercel.app'
 ];
 
 const corsOptions = {
