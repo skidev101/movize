@@ -12,7 +12,7 @@ const MovieInfo = ({ movie }) => {
         </div>
         <div className="rate">
           <span className="release-date">
-            <i className="fas fa-calender-alt"> </i>
+            <i className="fa-solid fa-calender"> </i>
             <p>{movie.release_date}</p>
           </span>
           <span className="likes">
