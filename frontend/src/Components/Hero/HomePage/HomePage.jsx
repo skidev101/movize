@@ -30,10 +30,9 @@ const HomePage = () => {
     <div className="hp-wrap">
       <div className="hp">
         <div className="text-box">
-        <h1>Movie Word search <br /> simplified</h1>
+        <h1>Movie search <br /> simplified</h1>
         <p>
-         Search for movies and word 
-         occurrences automatically and 100%
+         Search for movies automatically and 100%
          <span className="highlight">
            free
          </span>
