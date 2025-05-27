@@ -12,12 +12,12 @@ const MovieInfo = ({ movie }) => {
         </div>
         <div className="rate">
           <span className="release-date">
-            <i className="fa fa-calender-alt"> </i>
+            <i className="fas fa-calender-alt"> </i>
             <p>{movie.release_date}</p>
           </span>
           <span className="likes">
             <i className="fa fa-thumbs-up"></i>
-            <p>{movie.vote_average}/10</p>
+            <p>{Math.round(movie.vote_average).toFixed(1)}</p>
           </span>
         </div>
       </div>

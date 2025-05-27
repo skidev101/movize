@@ -27,7 +27,7 @@ const MovieCard = ({ movie }) => {
           </p>
           <p className="movie-votes">
             <i className="fa fa-thumbs-up"></i>
-            {movie.vote_average}
+            {Math.round(movie.vote_average).toFixed(1)}
           </p>
         </div>
       </div>
