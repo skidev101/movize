@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import HomePage from './HomePage/HomePage'
 import PopularMovies from '../PopularMovies/PopularMovies'
-//import NowPlaying from '../NowPlaying/NowPlaying'
+import NowPlaying from '../NowPlaying/NowPlaying'
 import Upcoming from '../Upcoming/Upcoming'
 
 
