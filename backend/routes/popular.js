@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { handlePopSearch } = require('../controllers/popularSearchController');
+const { getPopularMovies } = require('../controllers/popularMoviesController');
 
-router.get('/', handlePopSearch);
+router.get('/', getPopularMovies);
 
 module.exports = router

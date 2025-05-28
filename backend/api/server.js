@@ -17,6 +17,8 @@ app.use(express.json());
 app.use('/popular', require('../routes/popular'));
 app.use('/search', require('../routes/search'));
 app.use('/movie', require('../routes/movie'));
+app.use('/nowPlaying', require('../routes/nowPlaying'));
+app.use('/upcoming', require('../routes/upcoming'));
 
 
 app.listen(PORT, () => {
