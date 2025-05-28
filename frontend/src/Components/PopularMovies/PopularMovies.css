@@ -6,6 +6,7 @@
 }
 .mv-cards-wrap{
   width: 100%;
+  max-height: max-content;
   /* display: flex;
   align-items: center;
   gap: 10px;
