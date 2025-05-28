@@ -11,12 +11,10 @@
   position: relative;
 }
 .text-box{
-  color: #fff;
+  color: #000;
 }
 @media (min-width: 700px) {
   .hp{
-    display: grid;
-    place-items: center;
     width: max-content;
     height: 25em;
     padding: 1.2em 1.5em;
