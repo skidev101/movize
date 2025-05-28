@@ -33,7 +33,9 @@ const MovieInfo = ({ movie }) => {
         <h4>Genres</h4>
         <div className="mv-genres-wrap">
 	        {movie.genres.map((genre) => (
-	          <p key={genre.id}>{genre.name}</p>
+	          <div className="genre-wrap">
+							<p key={genre.id}>{genre.name}</p>
+						</div>
 	        ))}
         </div>
       </div>
