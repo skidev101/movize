@@ -1,6 +1,5 @@
 .hp-wrap{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 80vh;
@@ -12,7 +11,6 @@
   position: relative;
 }
 .text-box{
-  text-align: center;
   color: #fff;
 }
 @media (min-width: 700px) {
