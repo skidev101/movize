@@ -4,8 +4,8 @@
 .movie-wrap .movie-card{
   display: flex;
   flex-direction: column;
-  width: 150px;
-  height: 300px;
+  width: 130px;
+  height: 280px;
   min-height: 100%;
   padding: 8px 6px;
   color: #000;
@@ -34,12 +34,17 @@
   padding: 5px 0;
 }
 .movie-info .movie-title{
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: bold;
 }
 .movie-info .other-info{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 3px 0;
+}
+.movie-info .other-info p{
+	font-size: 1em;
 }
 .movie-votes i{
   padding: 0 3px;
