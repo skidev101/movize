@@ -1,5 +1,6 @@
 import React,  { useState, useEffect } from 'react';
 import MovieCard from '../MovieCard/MovieCard';
+import '../PopularMovies/PopularMovies.css'
 
 const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
