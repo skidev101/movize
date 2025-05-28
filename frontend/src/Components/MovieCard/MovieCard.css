@@ -4,7 +4,8 @@
 .movie-wrap .movie-card{
   display: flex;
   flex-direction: column;
-  width: 290px;
+  width: 200px;
+  height: 400px;
   min-height: 100%;
   padding: 8px 6px;
   color: #000;
