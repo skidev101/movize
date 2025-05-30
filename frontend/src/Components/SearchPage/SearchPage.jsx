@@ -25,7 +25,6 @@ const SearchPage = () => {
       setPlaceholderText(placeholderArray[currentIndex]);
       currentIndex = (currentIndex + 1) % placeholderArray.length;
     };
-    console.log("Hello world");
     const timer = setInterval(changePlaceholder, 3000);
     
     return () => clearInterval(timer)
@@ -85,8 +84,7 @@ const SearchPage = () => {
       <div className="searchbar" tabIndex="0">
         <div className="searchbar-icon">
           <span>
-            <i 
-            className="fa fa-magnifying-glass"></i>
+            <i className="fa fa-magnifying-glass"></i>
           </span>
         </div>
         <input 

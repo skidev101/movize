@@ -1,15 +1,15 @@
 import React from 'react'
-import './Hero.css'
-import HomePage from './HomePage/HomePage'
+import './HomePage.css'
+import Hero from './Hero/Hero'
 import PopularMovies from '../PopularMovies/PopularMovies'
 import NowPlaying from '../NowPlaying/NowPlaying'
 import Upcoming from '../Upcoming/Upcoming'
 
 
-const Hero = () => {
+const HomePage = () => {
   return (
     <div className="hero-wrap">
-      <HomePage />
+      <Hero />
       <PopularMovies />
       <NowPlaying />
       <Upcoming />
@@ -17,4 +17,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HomePage
