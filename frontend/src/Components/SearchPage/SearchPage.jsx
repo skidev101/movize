@@ -16,7 +16,8 @@ const SearchPage = () => {
       "Search Captain America",
       "Search Superman",
       "Search It",
-      "Search Black Adam"
+      "Search Black Adam",
+      "Search Thunderbolts"
   ];
   
   useEffect(() => {
