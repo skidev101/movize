@@ -41,7 +41,6 @@ const SearchPage = () => {
     if (e.key === 'Enter' && searchQuery.trim() !== ''){
       e.target.blur();
       handleSearch(e);
-      console.log("search in progress");
     }
   }
   
@@ -81,7 +80,7 @@ const SearchPage = () => {
   return (
     <>
       <form onSubmit={handleSearch}>
-      <div className="searchbar-wrap">
+      <div className="searchbar-cont">
       <div className="searchbar" tabIndex="0">
         <div className="searchbar-icon">
           <span>

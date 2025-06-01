@@ -9,12 +9,12 @@
   min-height: 100%;
   padding: 8px 6px;
   color: #000;
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
   border-radius: 14px;
   transition: 0.3s ease-out;
 }
 .movie-card:hover{
-  scale: 1.03;
+  scale: 1.02;
 }
 .movie-card .movie-img{
   width: 100%;

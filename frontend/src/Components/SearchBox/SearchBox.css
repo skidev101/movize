@@ -1,24 +1,19 @@
 .searchbar-wrap{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 3.5em;
+	
+  margin-top: 1.2em;
 }
 .search-wrap{
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 3em;
+  width: 85%;
+  height: 2.8em;
   background: #EEE;
   border-radius: 50px;
   box-shadow: 0 0 1px #2f2f2f;
 }
 @media (min-width: 700px) {
   .search-wrap{
-    width: 30em;
-    height: 4em;
+    height: 3em;
   }
 }
 .search-icon{
@@ -35,10 +30,10 @@
 }
 .search-icon span i{
   font-size: 1.2em;
-  color: #000;
+  color: #212121;
 }
 .search-wrap input{
-  width: 80%;
+  width: 85%;
   height: 100%;
   border: none;
   outline: none;

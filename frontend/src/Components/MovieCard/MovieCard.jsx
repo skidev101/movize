@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './MovieCard.css'
+import one from '../temp/one.jpg'
 
 const MovieCard = ({ movie }) => {
   const movieId = movie.id;
@@ -12,7 +13,7 @@ const MovieCard = ({ movie }) => {
       <div className="movie-img">
         <img 
         className="movie-image"
-        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        src={one}
         alt={movie.title}
         />
       </div>

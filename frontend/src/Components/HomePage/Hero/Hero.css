@@ -1,30 +1,36 @@
-.hp-wrap{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 80vh;
-  padding: 0 8px;
+.hero-wrap{
+	max-width: 100vw;
+  height: 50vh;
   background-image: url('../../../Assets/shield.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  margin-top: 2px;
 }
-.text-box{
-  color: #000;
+.hero{
+	width: 90%;
+	height: 100%;
+	max-width: 100vw;
+	display: flex;
+	justify-content: center;
+  flex-direction: column;
+  padding: 0 8px;
+}
+.hero .hero-box{
+  max-width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
 @media (min-width: 700px) {
-  .hp{
-    width: max-content;
-    height: 25em;
-    padding: 1.2em 1.5em;
+  .hero-wrap{
+	  height: 30vh;
   }
-}
-.text-box h1{
-  font-size: 2em;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
-.text-box p{
-  font-size: 1.4em;
+  .hero-box h1{
+	  font-size: 1.5em;
+  }
+  .hero-box p{
+	  font-size: 1.2em;
+  }
 }

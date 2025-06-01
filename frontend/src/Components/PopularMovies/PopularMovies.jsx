@@ -1,15 +1,17 @@
 import React,  { useState, useEffect } from 'react';
 import './PopularMovies.css';
 import MovieCard from '../MovieCard/MovieCard';
+import movies from '../temp/movies.js'
 
 const PopularMovies = () => {
-  const [movies, setMovies] = useState([]);
+  //const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
-  useEffect(() => {
-    handleSearch()
-  }, []);
+  // useEffect(() => {
+  //   handleSearch()
+  // }, []);
+  console.log(movies)
   
   const displayErr = (message) => {
     setError(message);
