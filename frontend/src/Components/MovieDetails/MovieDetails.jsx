@@ -4,19 +4,20 @@ import './MovieDetails.css'
 import MovieInfo from './MovieInfo/MovieInfo'
 // import WordSearch from './WordSearch/WordSearch'
 import shield from '../../Assets/shield.jpg'
+import movies from '../temp/movies'
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   
-  const [completeMovie, setCompleteMovie] = useState(null);
+  const [completeMovie, setCompleteMovie] = useState(movies);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   
-  useEffect(() => {
-    if (movieId) {
-      fetchMovieDetails();
-    }
-  }, [movieId]);
+  // useEffect(() => {
+  //   if (movieId) {
+  //     fetchMovieDetails();
+  //   }
+  // }, [movieId]);
   
   const fetchMovieDetails = async () => {
       setError(null);
@@ -55,7 +56,7 @@ const MovieDetails = () => {
         : error ? (<p className="error-text">{error}</p>)
         : completeMovie ? (
         <div className="md-holder">
-          <MovieInfo movie={ completeMovie }/>
+          <MovieInfo />
         </div>
       ) : null}
     </div>

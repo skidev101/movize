@@ -23,7 +23,7 @@ const MovieCard = ({ movie }) => {
         </h2>
         <div className="other-info">
           <p className="movie-date">
-            <i className="fa-solid fa-calender"> </i>
+            <i className="fa-solid fa-calendar"> </i>
             {movie.release_date}
           </p>
           <p className="movie-votes">
