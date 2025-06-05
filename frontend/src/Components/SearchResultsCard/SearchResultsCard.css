@@ -13,7 +13,7 @@
   transition: 0.3s ease-out;
 }
 .mv-card-wrapper:hover{
-  scale: 1.01;
+  scale: 1.011;
 }
 .mv-card-wrapper .mv-card{
 	display: flex;
