@@ -19,7 +19,7 @@ export default [
 		    "name": "thriller"
 	    }
 	  ],
-	  "overview": "a very exciting movie with a lot of action and exciting scenes to get you off your seat",
+	  "overview": "a very exciting movie with a lot of action and exciting scenes to get you off your seat wb ab djdxj  xdjd did jd f  fbdjss hjd djd s dj jd djd did jd disfjs s jd ssis d",
 	  "production_companies": [
 		  {
 				"id": 1,

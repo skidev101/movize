@@ -1,0 +1,33 @@
+.circle-wrapper {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  margin-left: 3em;
+  border: 3px solid #f1f1f1;
+  border-radius: 50%;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background: conic-gradient(green 0deg, #fdd 0deg); /* Will be overridden dynamically */
+}
+
+.rate-wrapper{
+	width: 85%;
+	height: 85%;
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+	background: #fff;
+}
+.rate-wrapper span{
+	color: #000;
+}
