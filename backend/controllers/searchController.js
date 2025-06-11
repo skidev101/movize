@@ -1,5 +1,5 @@
 const handleSearch = async(req, res) => {
-  const { searchQuery } = req.body;
+  const { searchQuery, page } = req.body;
   if (!searchQuery) return res.status(400).json({ message: 'Empty body' });
   
   try{
@@ -12,7 +12,9 @@ const handleSearch = async(req, res) => {
 	    }
     };
     
-    const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=true&language=en-US&page=1`, options);
+    const response = await
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=true&language=en-US&page=${page}`,
+    options);
     
     const data = await response.json();
     res.json(data);
