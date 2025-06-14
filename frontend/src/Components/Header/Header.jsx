@@ -5,7 +5,7 @@ const Header = () => {
   return(
     <>
       <header>
-        <h2>m..</h2>
+        <h2>movize</h2>
       </header>
     </>
   )

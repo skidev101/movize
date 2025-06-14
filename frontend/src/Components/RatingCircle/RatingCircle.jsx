@@ -8,7 +8,7 @@ const RatingCircle = ({ rating }) => {
 		<div className="circle-wrapper">
 			<div 
 			  className="circle"
-			  style={{ background: `conic-gradient(green ${angle}deg, #333 0deg`}}
+			  style={{ background: `conic-gradient(#0e960e ${angle}deg, #333 0deg`}}
 			>
 				<div className="rate-wrapper">
 					<span>{rating}%</span>
