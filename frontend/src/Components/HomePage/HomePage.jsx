@@ -11,6 +11,7 @@ import SearchResultsCard from '../SearchResultsCard/SearchResultsCard'
 
 const HomePage = () => {
 	console.log('homepage mounted');
+	console.log('hello world')
   return (
     <div className="hero-wrap">
       <Hero />
