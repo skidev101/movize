@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './MovieCard.css'
-import one from '../temp/one.jpg'
 import RatingCircle from '../RatingCircle/RatingCircle'
 
 const MovieCard = ({ movie }) => {
   const movieId = movie.id;
   const likes = (movie.vote_average / 10) * 100;
-  console.log('hello world');
   
   return(
     <div className="movie-wrap">
@@ -16,7 +14,7 @@ const MovieCard = ({ movie }) => {
       <div className="movie-img">
         <img 
         className="movie-image"
-        src={one}
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
         />
       </div>

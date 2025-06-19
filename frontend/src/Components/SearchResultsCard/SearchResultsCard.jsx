@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './SearchResultsCard.css'
-import one from '../temp/one.jpg'
-import movie from '../temp/movie'
 import RatingCircle from '../RatingCircle/RatingCircle'
 
-const SearchResultsCard = () => {
-  const movieId = movie[0].id;
-  const likes = (movie[0].vote_average / 10) * 100;
+const SearchResultsCard = ({ movie }) => {
+  const movieId = movie.id;
+  const likes = (movie.vote_average / 10) * 100;
   
   return(
     <div className="mv-wrap">
@@ -18,8 +16,8 @@ const SearchResultsCard = () => {
 		      		<div className="mv-img">
 				        <img 
 					        className="mv-image"
-					        src={one}
-					        alt={movie[0].title}
+					        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+					        alt={movie.title}
 				        />
 				      </div>
 				      <div className="mv-votes">
@@ -28,15 +26,15 @@ const SearchResultsCard = () => {
 		      	</div>
 			      <div className="mv-info">
 			        <h2 className="mv-title">
-			          {movie[0].title}
+			          {movie.title}
 			        </h2>
 			        <div className="mv-desc">
-				        <p>{movie[0].overview}</p>
+				        <p>{movie.overview}</p>
 			        </div>
 			        <div className="other-info">
 			          <p className="mv-date">
 			            <i className="fa-solid fa-calendar"> </i>
-			            {movie[0].release_date}
+			            {movie.release_date}
 			          </p>
 			        </div>
 			      </div>

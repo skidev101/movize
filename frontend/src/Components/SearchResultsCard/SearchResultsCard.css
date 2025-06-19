@@ -52,10 +52,13 @@
   font-weight: bold;
 }
 .mv-info .mv-desc{
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	width: 100%;
 	max-width: 150px;
-	max-height: 50px;
-	overflow: scroll;
 	margin-bottom: 12px;
 }
 .mv-info .other-info p{
