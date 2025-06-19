@@ -8,7 +8,10 @@ const getPopularMovies = async (req, res) => {
       
   } catch (err){
     console.error(err);
-    res.sendStatus(500);
+    res.json({ 
+    	message: 'an error occured',
+    	error: err
+    });
   }
 }
 
