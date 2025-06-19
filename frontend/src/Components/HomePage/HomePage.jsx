@@ -13,6 +13,7 @@ const HomePage = () => {
 	console.log('homepage mounted');
 	console.log('hello world');
 	console.log("hi");
+	console.log("finally done");
   return (
     <div className="hero-wrap">
       <Hero />
