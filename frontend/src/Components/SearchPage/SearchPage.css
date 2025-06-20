@@ -71,6 +71,11 @@
   margin-top: 10px;
   text-align: center;
 }
+.mv-res-cards{
+	display: flex;
+	flex-direction: column;
+	row-gap: 5px;
+}
 .loader {
   width: 50px;
   aspect-ratio: 1;

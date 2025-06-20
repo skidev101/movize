@@ -3,21 +3,20 @@ import { useParams } from 'react-router-dom'
 import './MovieDetails.css'
 import MovieInfo from './MovieInfo/MovieInfo'
 // import WordSearch from './WordSearch/WordSearch'
-import shield from '../../Assets/shield.jpg'
-import movies from '../temp/movies'
+
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   
-  const [completeMovie, setCompleteMovie] = useState(movies);
+  const [completeMovie, setCompleteMovie] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   
-  // useEffect(() => {
-  //   if (movieId) {
-  //     fetchMovieDetails();
-  //   }
-  // }, [movieId]);
+  useEffect(() => {
+    if (movieId) {
+      fetchMovieDetails();
+    }
+  }, [movieId]);
   
   const fetchMovieDetails = async () => {
       setError(null);
@@ -47,8 +46,8 @@ const MovieDetails = () => {
         };
     };
   
-    const bgUrl = completeMovie?.poster_path ? `https://image.tmdb.org/t/p/w500${completeMovie.poster_path}` : shield;
-    const bgStyle = {backgroundImage: `url(${bgUrl})`};
+    // const bgUrl = completeMovie?.poster_path ? `https://image.tmdb.org/t/p/w500${completeMovie.poster_path}` : shield;
+    // const bgStyle = {backgroundImage: `url(${bgUrl})`};
   
   return(
     <div className="md-wrap">
@@ -56,7 +55,7 @@ const MovieDetails = () => {
         : error ? (<p className="error-text">{error}</p>)
         : completeMovie ? (
         <div className="md-holder">
-          <MovieInfo />
+          <MovieInfo movie={completeMovie} />
         </div>
       ) : null}
     </div>

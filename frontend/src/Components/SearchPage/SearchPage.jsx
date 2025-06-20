@@ -127,7 +127,7 @@ const SearchPage = () => {
     <p className="error-text">{error}</p>
     ) : (
     <>
-    	<div className="mv-cards">
+    	<div className="mv-res-cards">
 	     {movies.map((movie) => (
 	        <SearchResultsCard key={movie.id} movie={movie}/>
 	      ))}
