@@ -2,7 +2,7 @@ import React from "react";
 import "./MovieInfo.css";
 
 const MovieInfo = ({ movie }) => {
-  if (movie) console.log(movie);
+  if (!movie) return <div>Loading...</div>;    
 
   return (
     <div className="mi-wrap">
@@ -10,6 +10,9 @@ const MovieInfo = ({ movie }) => {
         <div className="title-rate">
           <div className="title">
             <h1>{movie.title}</h1>
+          </div>
+          <div className="tagline">
+            <h3>{movie.tagline}</h3>  
           </div>
           <div className="rate">
             <span className="release-date">
@@ -37,7 +40,7 @@ const MovieInfo = ({ movie }) => {
           <p>{movie.overview}</p>
         </div>
 
-        
+
         <div className="mv-genres">
           <h3>Genres</h3>
           <div className="mv-genres-wrap">
@@ -57,6 +60,19 @@ const MovieInfo = ({ movie }) => {
               <div key={comp.id} className="prod-wrap">
                 <div className="prod-box">
                   <p>{comp.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mv-prod-countries">
+          <h3>Production Countries</h3>
+          <div className="prod-grid-boxes">
+            {movie.production_countries.map((country) => (
+              <div key={country.iso_3166_1} className="prod-wrap">
+                <div className="prod-box">
+                  <p>{country.name}</p>
                 </div>
               </div>
             ))}

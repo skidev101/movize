@@ -10,7 +10,6 @@ const PopularMovies = () => {
   useEffect(() => {
     handleSearch()
   }, []);
-  console.log(movies)
   
   const displayErr = (message) => {
     setError(message);
@@ -28,7 +27,7 @@ const PopularMovies = () => {
       });
       const data = await response.json();
       if (!data.results || data.results.length === 0) {
-        displayErr('No Popular moviez for now');
+        displayErr('No Popular movize for now');
       } else {
         setMovies(data.results)
       }

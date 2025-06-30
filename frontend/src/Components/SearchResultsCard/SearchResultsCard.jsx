@@ -7,6 +7,7 @@ const SearchResultsCard = ({ movie }) => {
   const movieId = movie.id;
   const likes = Math.round((movie.vote_average / 10) * 100);
   
+  
   return(
     <div className="mv-wrap">
       <Link to={`/movie/${movieId}`} className="mv-card-link">
