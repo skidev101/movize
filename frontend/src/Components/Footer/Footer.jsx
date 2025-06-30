@@ -1,15 +1,14 @@
-import React from 'react'
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-  return (
-      <footer className="footer">
-         <div className="container">
-         <p className="text-center">
-            &copy; {new Date().getFullYear()} Movize. All rights reserved.
-         </p>
-         </div>
-      </footer>
-  )
-}
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer__container">
+      <p className="footer__text">
+        &copy; {new Date().getFullYear()} Movize. All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;

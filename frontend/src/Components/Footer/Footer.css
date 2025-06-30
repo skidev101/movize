@@ -1,15 +1,19 @@
-.footer{
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   height: 60px;
-   background-color: #333;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.footer {
+  width: 100%;
+  min-height: 60px;
+  background-color: #f1ecec;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #f3ecec;
 }
-.footer p {
-   margin: 0;
-   font-size: 14px;
+.footer__container {
+  width: 100%;
+  text-align: center;
+}
+.footer__text {
+  margin: 0;
+  font-size: 16px;
 }

@@ -4,6 +4,7 @@ import Hero from './Hero/Hero'
 import PopularMovies from '../PopularMovies/PopularMovies'
 import NowPlaying from '../NowPlaying/NowPlaying'
 import Upcoming from '../Upcoming/Upcoming'
+import Footer from '../Footer/Footer'
 
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <PopularMovies />
       <NowPlaying />
       <Upcoming />
+      <Footer />
     </div>
   )
 }

@@ -1,14 +1,21 @@
 .mi-wrap{
   display: flex;
   justify-content: center;
-  flex-direction: column;
   width: 98%;
-  max-width: 800px;
   min-height: 100%;
   padding: 1em 8px;
   color: #000;
   background: #f1f1f1;
   border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.mi-wrap .title-img{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  margin: 0 auto;
 }
 .title-rate{
   display: flex;
@@ -17,7 +24,7 @@
   text-align: left;
 }
 .title h1{
-  font-size: 1.4em;
+  font-size: 2em;
 }
 .rate{
   display: flex;
@@ -37,23 +44,27 @@
 .rate span p{
   padding: 0 5px;
 }
-/* .rate .release-date{
-	display: flex;
-}
-.rate .likes{
-	display: flex;
-	gap: 3px;
-} */
 .mv-img{
   width: 100%;
-  height: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 18px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
 }
 .mv-img img{
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 420px;
   object-fit: cover;
   object-position: center;
   border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+.mv-other-info{
+  padding: 5em 1em;
 }
 .mv-genres{
   display: flex;

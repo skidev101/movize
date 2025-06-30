@@ -8,7 +8,7 @@ import MovieInfo from './MovieInfo/MovieInfo'
 const MovieDetails = () => {
   const { movieId } = useParams();
   
-  const [completeMovie, setCompleteMovie] = useState([]);
+  const [completeMovie, setCompleteMovie] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   

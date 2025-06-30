@@ -1,8 +1,8 @@
-.searchbar-cont{
+.searchbar-cont {
   display: flex;
   justify-content: center;
 }
-.searchbar-cont .searchbar{
+.searchbar-cont .searchbar {
   display: flex;
   align-items: center;
   column-gap: 2px;
@@ -11,23 +11,23 @@
   height: 3em;
   border-bottom: 1px solid #000;
 }
-.searchbar-cont .searchbar:focus{
-  border-bottom: 1px solid #4E7EFE;
+.searchbar-cont .searchbar:focus {
+  border-bottom: 1px solid #4e7efe;
 }
-.searchbar-cont .searchbar .searchbar-icon{
+.searchbar-cont .searchbar .searchbar-icon {
   padding: 0 2px;
 }
-.searchbar-cont .searchbar .searchbar-icon span{
+.searchbar-cont .searchbar .searchbar-icon span {
   display: grid;
   place-items: center;
   width: 40px;
   height: 40px;
 }
-.searchbar-cont .searchbar .searchbar-icon span i{
+.searchbar-cont .searchbar .searchbar-icon span i {
   font-size: 1.2em;
   color: #f1f1f1;
 }
-.searchbar-cont input{
+.searchbar-cont input {
   width: 70%;
   height: 100%;
   border: none;
@@ -37,16 +37,16 @@
   font-size: 1.1em;
   transition: 0.3s;
 }
-.searchbar-cont input:focus{
+.searchbar-cont input:focus {
   border-bottom: 1px solid blue;
 }
-.searchbar-cont .searchbar .searchbar-btn{
+.searchbar-cont .searchbar .searchbar-btn {
   width: 40px;
   height: 40px;
-  background: #4E7EFE;
+  background: #4e7efe;
   border-radius: 50%;
 }
-.searchbar-cont .searchbar .searchbar-btn button{
+.searchbar-cont .searchbar .searchbar-btn button {
   width: 100%;
   height: 100%;
   border: none;
@@ -55,26 +55,41 @@
   display: grid;
   place-items: center;
 }
-.searchbar-cont .searchbar .searchbar-btn button i{
+.searchbar-cont .searchbar .searchbar-btn button i {
   color: #fff;
   font-size: 1.2em;
 }
-.searchbar-cont .searchbar .searchbar-btn button:active{
+.searchbar-cont .searchbar .searchbar-btn button:active {
   background: lightblue;
 }
-.error-text{
+.error-text {
   text-align: center;
   margin-top: 10px;
 }
-.mv-res-title{
+.mv-res-title {
   width: 100%;
   margin-top: 10px;
   text-align: center;
 }
-.mv-res-cards{
-	display: flex;
-	flex-direction: column;
-	row-gap: 5px;
+.mv-res-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 8px 32px 8px;
+  box-sizing: border-box;
+  min-height: 60vh;
+}
+.mv-res-cards > * {
+  flex: 1 1 320px;
+  max-width: 370px;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
 }
 .loader {
   width: 50px;
@@ -89,23 +104,41 @@
   content: "";
   position: absolute;
   border-radius: 50px;
-  box-shadow: 0 0 0 2px inset #4E7EFE;
+  box-shadow: 0 0 0 2px inset #4e7efe;
   animation: l5 3s infinite;
 }
 .loader:after {
   animation-delay: -1.5s;
   border-radius: 0;
 }
-@keyframes l5{
-  0%    {inset:0    30px 30px 0   }
-  12.5% {inset:0    30px 0    0   }
-  25%   {inset:30px 30px 0    0   }
-  37.5% {inset:30px 0    0    0   }
-  50%   {inset:30px 0    0    30px}
-  62.5% {inset:0    0    0    30px}
-  75%   {inset:0    0    30px 30px}
-  87.5% {inset:0    0    30px 0   }
-  100%  {inset:0    30px 30px 0   }
+@keyframes l5 {
+  0% {
+    inset: 0 30px 30px 0;
+  }
+  12.5% {
+    inset: 0 30px 0 0;
+  }
+  25% {
+    inset: 30px 30px 0 0;
+  }
+  37.5% {
+    inset: 30px 0 0 0;
+  }
+  50% {
+    inset: 30px 0 0 30px;
+  }
+  62.5% {
+    inset: 0 0 0 30px;
+  }
+  75% {
+    inset: 0 0 30px 30px;
+  }
+  87.5% {
+    inset: 0 0 30px 0;
+  }
+  100% {
+    inset: 0 30px 30px 0;
+  }
 }
 
 .pagination {
