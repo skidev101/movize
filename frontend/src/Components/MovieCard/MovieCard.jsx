@@ -5,7 +5,8 @@ import RatingCircle from '../RatingCircle/RatingCircle'
 
 const MovieCard = ({ movie }) => {
   const movieId = movie.id;
-  const likes = (movie.vote_average / 10) * 100;
+  const likes = Math.round((movie.vote_average / 10) * 100);
+
   
   return(
     <div className="movie-wrap">
