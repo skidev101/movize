@@ -19,6 +19,12 @@
   display: flex;
   align-items: center;
   overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+.mv-cards::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .loader {
   width: 50px;

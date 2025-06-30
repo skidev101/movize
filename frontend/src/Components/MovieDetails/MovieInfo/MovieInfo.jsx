@@ -32,6 +32,12 @@ const MovieInfo = ({ movie }) => {
       </div>
 
       <div className="mv-other-info">
+        <div className="mv-desc">
+          <h3>Overview</h3>
+          <p>{movie.overview}</p>
+        </div>
+
+        
         <div className="mv-genres">
           <h3>Genres</h3>
           <div className="mv-genres-wrap">
@@ -43,10 +49,6 @@ const MovieInfo = ({ movie }) => {
           </div>
         </div>
 
-        <div className="mv-desc">
-          <h3>Overview</h3>
-          <p>{movie.overview}</p>
-        </div>
 
         <div className="mv-prod">
           <h3>Producers</h3>
