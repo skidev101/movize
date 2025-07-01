@@ -12,7 +12,7 @@ A sleek and responsive web application that allows users to **search for movies*
 
 ## 🚀 Live Demo
 
-Visit the app here: [https://movize.vercel.app/](https://movize.vercel.app/)
+[Visit the app here](https://movize.vercel.app/)
 
 ## 🛠️ Built With
 
