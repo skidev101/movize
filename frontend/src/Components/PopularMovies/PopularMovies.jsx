@@ -1,46 +1,47 @@
-import React,  { useState, useEffect } from 'react';
-import './PopularMovies.css';
-import MovieCard from '../MovieCard/MovieCard';
+import React, { useState, useEffect } from "react";
+import "./PopularMovies.css";
+import MovieCard from "../MovieCard/MovieCard";
 
 const PopularMovies = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  
+
   useEffect(() => {
-    handleSearch()
+    handleSearch();
   }, []);
-  
+
   const displayErr = (message) => {
     setError(message);
-  } 
-  
+  };
+
   const handleSearch = async () => {
-    setError(null)
+    setError(null);
     setLoading(true);
-    try{
-      const response = await fetch('https://movize-backend2.vercel.app/popular', {
-        method: 'GET',
-        headers: { 
-          'Content-Type': 'application/json'
+    try {
+      const response = await fetch(
+        "https://movize-backend2.vercel.app/popular",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
+      );
       const data = await response.json();
       if (!data.results || data.results.length === 0) {
-        displayErr('No Popular movize for now');
+        displayErr("No Popular movize for now");
       } else {
-        setMovies(data.results)
+        setMovies(data.results);
       }
-      
-      } catch (err) {
-        console.error(err);
-        displayErr('An Error occured');
-      } finally {
-        setLoading(false);
-      }
-    };
+    } catch (err) {
+      displayErr("An Error occured");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  return(
+  return (
     <div className="pop-wrap">
       <div className="title">
         <h2>Trending</h2>
@@ -51,16 +52,15 @@ const PopularMovies = () => {
         <p className="error-text">{error}</p>
       ) : (
         <div className="mv-cards-wrap">
-        <div className="mv-cards">
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
+          <div className="mv-cards">
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+          </div>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-
-export default PopularMovies
+export default PopularMovies;
