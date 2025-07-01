@@ -1,8 +1,35 @@
-# React + Vite
+# 🎬 Movie Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and responsive web application that allows users to **search for movies** and **view detailed information** about each one. Built using modern frontend tools for speed, clarity, and performance.
 
-Currently, two official plugins are available:
+## 🔍 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔥 Browse popular movies
+- 🔎 Search for movies by title
+- 📄 View detailed info (overview, release date, rating, poster)
+- ⚡ Fast and smooth user experience with React + Vite
+- 📱 Responsive design — works on mobile, tablet, and desktop
+
+## 🚀 Live Demo
+
+Visit the app here: [https://movize.vercel.app/]  
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [The Movie Database API (TMDb)](https://www.themoviedb.org/documentation/api)
+- [Vercel](https://vercel.com/) for deployment
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/skidev101/movize.git
+cd movize
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
